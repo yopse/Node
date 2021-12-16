@@ -26,6 +26,20 @@
 //File system
 
 const fs = require('fs');
+const path = require('path');
+
+//Making a directory
+
+fs.mkdir(path.join(__dirname,'/test'), (err)=>{
+
+      if(err) 
+       {
+       console.log("Something went wrong")
+       return
+       }
+
+       console.log("Folder created");
 
 
+})
 
