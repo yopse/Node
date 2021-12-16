@@ -30,16 +30,42 @@ const path = require('path');
 
 //Making a directory
 
-fs.mkdir(path.join(__dirname,'/test'), (err)=>{
+// fs.mkdir(path.join(__dirname,'/test'), (err)=>{
 
-      if(err) 
-       {
-       console.log("Something went wrong")
-       return
-       }
+//       if(err) 
+//        {
+//        console.log("Something went wrong")
+//        return
+//        }
 
-       console.log("Folder created");
+//        console.log("Folder created");
 
 
-})
+// })
+
+//create a file
+
+  fs.writeFile(path.join(__dirname,'test', 'text.txt'),"hello node",(err)=>{
+
+      if(err)
+      {
+
+         throw arr;
+      }
+
+      fs.appendFile(path.join(__dirname,'test','text.txt'),'Hey node two', (err)=>{
+          
+         if(err)
+         {
+              console.log("there is error");
+         }
+         
+         console.log("Successfully added");
+
+      })
+
+      console.log("file created...");
+
+  })
+
 
