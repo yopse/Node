@@ -45,27 +45,40 @@ const path = require('path');
 
 //create a file
 
-  fs.writeFile(path.join(__dirname,'test', 'text.txt'),"hello node",(err)=>{
+//   fs.writeFile(path.join(__dirname,'test', 'text.txt'),"hello node",(err)=>{
 
-      if(err)
-      {
+//       if(err)
+//       {
 
-         throw arr;
-      }
-
-      fs.appendFile(path.join(__dirname,'test','text.txt'),'Hey node two', (err)=>{
+//          throw arr;
+//       }
+// append data
+//       fs.appendFile(path.join(__dirname,'test','text.txt'),'Hey node two', (err)=>{
           
-         if(err)
-         {
-              console.log("there is error");
-         }
+//          if(err)
+//          {
+//               console.log("there is error");
+//          }
          
-         console.log("Successfully added");
+//          console.log("Successfully added");
 
-      })
+//       })
 
-      console.log("file created...");
+//       console.log("file created...");
 
-  })
+//   })
 
 
+
+
+fs.readFile(path.join(__dirname,'test','text.txt'),(err, data)=>{
+
+     if(err) {
+
+         throw err
+     }
+
+     console.log(data.toString());
+
+
+});
