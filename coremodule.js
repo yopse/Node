@@ -25,10 +25,10 @@
 
 //File system
 
-const fs = require('fs');
-const path = require('path');
+// const fs = require('fs');
+// const path = require('path');
 
-//Making a directory
+// //Making a directory
 
 // fs.mkdir(path.join(__dirname,'/test'), (err)=>{
 
@@ -71,14 +71,81 @@ const path = require('path');
 
 
 
-fs.readFile(path.join(__dirname,'test','text.txt'),(err, data)=>{
+// fs.readFile(path.join(__dirname,'test','text.txt'),(err, data)=>{
 
-     if(err) {
+//      if(err) {
 
-         throw err
-     }
+//          throw err
+//      }
 
-     console.log(data.toString());
+//      console.log(data.toString());
 
 
-});
+// });
+
+
+//Os module
+
+// const os = require('os');
+
+// console.log('Os type: ', os.type());
+
+//os platform
+
+// console.log("Os platform :", os.platform() );
+
+// for the cpu architecture
+
+// console.log("cpu arch :", os.arch());
+
+// for free memory
+
+// console.log('free memory :', os.freemem())
+
+// //Total mem
+// console.log('free memory :', os.totalmem())
+
+// uptime for start
+
+// console.log("uptime : ", os.uptime());
+
+
+//Events module
+
+const Emitter = require('events');
+
+// const myEmitter = new Emitter();
+
+// myEmitter.on('somename',(data)=>{
+
+//     console.log(data);  
+// })
+
+
+// myEmitter.emit('somename',{
+
+//     name: 'Archish'
+// });
+
+// class Auth extends Emitter{
+    
+//     register(username){
+//      console.log('Registered successully');
+
+//      this.emit('registered', username);
+//    }
+// }
+
+
+// const auth = new Auth();
+
+// //listen
+
+// auth.on('registered',(data)=>{
+    
+//    console.log(`Sending email to ${data}`)
+// })
+
+// auth.register('codershouse');
+
+
